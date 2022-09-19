@@ -1,0 +1,276 @@
+*{
+    font-family: 'Pretendard-Regular';
+    box-sizing: border-box;
+}
+a{
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+.m_auto{
+    margin: auto;
+}
+.disFlex{
+    display: flex;
+}
+.justify-space-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+
+
+/* ------------------------------------- */
+/* ----------- 로그인 페이지  ----------- */
+/* ------------------------------------- */
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.291) 0px 8px 24px;
+    position: relative;
+}
+header a{
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.under_bg{
+    height: calc(100vh - 100px);
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,195,45,0.22452731092436973) 100%);
+    padding-top: 70px;
+}
+.white_box{
+    width: 960px;
+    margin: auto;
+    background-color: white;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    display: flex;
+    overflow: hidden;
+}
+.white_box h1{
+    font-size: 26px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.left_box{
+    width: 50%;
+    height: 578px;
+    /* background-color: rgb(255, 198, 113); */
+    background-image: url('../images/login/right2.jpg');
+    background-size: cover;
+}
+.right_box{
+    padding: 60px 90px;
+}
+.inner_box{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 40px;
+}
+.inner_box>div>div input{
+    width: 208px;
+    height: 40px;
+    padding: 3px 7px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.inner_box>div>div input:focus{
+    outline: 1px solid rgba(255,146,20,1);
+}
+.inner_box>div>div:first-child{
+    margin-bottom: 10px;
+}
+.inner_box .join_link{
+    width: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    color: gray;
+}
+.inner_box .join_link p:first-child{
+    font-size: 14px;
+}
+.inner_box .join_link a:hover{
+    text-decoration: underline;
+    color: coral;
+}
+.inner_box div span{
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+}
+.loginBtn{
+    width: 300px;
+    line-height: 40px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(255,146,20,1) 0%, rgba(255,192,57,1) 100%);
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    letter-spacing: 5px;
+}
+.sns_login a{
+    display: block;
+    margin-bottom: 5px;    
+}
+.footer{
+    margin-top: 80px;
+}
+.footer_ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.ul1 li:nth-child(even){
+    color: rgb(202, 202, 202);
+}
+.footer_ul a{
+    padding: 0 10px;
+    color: #333;
+}
+.footer_ul>li:first-child a{
+    padding-left: 0;
+}
+.footer_ul a:hover{
+    text-decoration: underline;
+    color: #333;
+}
+.footer_ul img{
+    width: 100px;
+    opacity: 0.5;
+    vertical-align: middle;
+}
+.footer>ul:last-child li:last-child{
+    line-height: 25px;
+}
+
+
+/* ------------------------------------- */
+/* ----------- 회원가입 페이지  --------- */
+/* ------------------------------------- */
+.under_bg2{
+    height: calc(100vh - 100px);
+    background-color: #f4f4f4;
+    /* background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,195,45,0.22452731092436973) 100%); */
+    padding-top: 40px;
+}
+.join_box{
+    width: 1090px;
+    height: 540px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    overflow: hidden;
+    padding: 40px 20px;
+    position: relative;
+}
+.join_box h1{
+    font-size: 26px;
+    letter-spacing: 7px;
+    padding-bottom: 30px;
+    /* margin-bottom: 20px; */
+    /* font-weight: 600; */
+    border-bottom: 1px solid #dddddd;
+}
+
+.join_box>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #dddddd;
+}
+a.member{
+    position: relative;
+}
+a.member:after{
+    position: absolute;
+    top: 5%;
+    right: 0;
+    content: '';
+    width: 1px;
+    height: 90%;
+    background-color: #dddddd;
+}
+.join_box>div>a{
+    width: 50%;
+    display: block;
+    padding: 65px 85px;
+    transition: box-shadow 0.3s;
+}
+.join_box>div>a:hover{
+    border: 2px solid corald;
+}
+.join_box>div a h4{
+    font-size: 26px;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+.join_box>div>a .icon_box{
+    display: flex;
+    justify-content: space-between;
+}
+.join_box .icon_box>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.join_box .icon_box span{
+    font-size: 16px;
+    margin-top: 15px;
+}
+.join_box h4{
+    display: inline-block;
+    text-transform:uppercase;
+}
+.join_box h4::after{
+    display:block;
+    content: '';
+    margin-top: 5px;
+    border-bottom: solid 2px coral;  
+    transform: scaleX(0);  
+    transition: transform 0.4s ease-in-out;
+}
+.join_box>div>a:hover h4::after{
+    transform: scaleX(1);
+}
+.join_box>a{
+    margin-left: 5px;
+    color: gray;
+    text-decoration: underline;
+}
+.join_box>a:hover{
+    color: coral;
+}
+
+.join_box>div>a:hover{
+    box-shadow: rgb(231, 231, 231) inset 0 0 30px;
+}
+.join_box>div>a:hover span{
+    font-weight: 600;
+}
+
+
+
+

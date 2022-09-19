@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/store.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/17da812ad5.js" crossorigin="anonymous"></script>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/store.js"></script>
+    <title>store_view</title>
+</head>
+<body>
+    <header>
+        <div class="header_wrap disFlex align-center justify-space-between">
+            <a href="../index.html">
+                <img src="../images/logo_color.png" alt="로고">
+            </a>
+            <ul class="search_bar disFlex">
+                <li><input type="text" class="search_1" placeholder="지역"></li>
+                <li><input type="text" class="search_2" placeholder="가게이름, 메뉴"></li>
+                <li><input type="text" class="search_3" placeholder="키워드 (데이트, 회식, 카페)"></li>
+                <li><input type="button" value="검색"></li>
+            </ul>
+            <div class="member_profile">
+                <a href="">
+                    <img src="../images/sec_1/busan.png">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div id="background">
+        <div id="store_view">
+            <div class="store_photo">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../images/review/870475_1661158051213_9322.jpg"></div>
+                        <div class="swiper-slide"><img src="../images/review/870475_1661158051213_9323.jpg"></div>
+                        <div class="swiper-slide"><img src="../images/review/870475_1661158051213_9322.jpg"></div>
+                        <div class="swiper-slide"><img src="../images/review/870475_1661158051213_9322.jpg"></div>
+                        <div class="swiper-slide"><img src="../images/review/870475_1661158051213_9322.jpg"></div>
+                    </div>
+                </div>
+                <div class="myBtn myBtn-next s2Next"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="myBtn myBtn-prev s2Prev"><i class="fa-solid fa-chevron-left"></i></div>
+            </div>
+            <div class="store_Information">
+                <div class="left_box">
+                    <div>
+                        <p>모루<span>4.8</span></p>
+                        <i class="fa-solid fa-pencil"><span>180</span></i><i class="fa-solid fa-star"><span>7800</span></i>
+                        <p class="text">대전에서 유명한 브런치맛집 모루입니다. <br>
+                            이 곳은 영업을 오후 4시까지만 하는 정통 브런치맛집으로 일찍 문을 닫지만 줄서있는 손님들이 있을정도로 유명합니다. <br>
+                            이 곳의 대표메뉴는 해쉬브라운 에그베네딕트로 겉은 바삭하고 속은 담백한 해쉬브라운과 햄, 그 위에 홀랜다이즈 소스가 듬뿍 뿌려져 있습니다. <br>
+                            또한 딸기와 팬케익이 수북히 나오는 딸기팬케익이 있으며 정통 브런치를 느낄 수 있는 해쉬브라운과 소세지도 유명합니다. <br>
+                            그리고 브런치를 주문하시면 커피는 1000원입니다.
+                        </p>
+                        <div class="list_btn favo disFlex align-center">
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                            <p>관심 가게</p>
+                        </div>
+                        <div class="list_btn revi disFlex align-center">
+                            <i class="fa-regular fa-comment-dots fa-2x"></i>
+                            <p>리뷰 등록</p>
+                        </div>
+                    </div>
+                    <div class="store_table">
+                        <table>
+                            <tr>
+                                <td>주소</td>
+                                <td>대전시 서구 둔산2동 1201번지 1층</td>
+                            </tr>
+                            <tr>
+                                <td>전화 번호</td>
+                                <td>042-486-2201</td>
+                            </tr>
+                            <tr>
+                                <td>음식 종류</td>
+                                <td>카페/디저트</td>
+                            </tr>
+                            <tr>
+                                <td>영업 시간</td>
+                                <td>00:00 ~ 24:00</td>
+                            </tr>
+                            <tr>
+                                <td>메뉴</td>
+                                <td>
+                                    <ul>
+                                        <li>ALL BRUNCH<span>12,000원</span></li>
+                                        <li>해쉬 브라운 에그베네딕트<span>13,000원</span></li>
+                                        <li>아메리카노<span>3000원</span></li>
+                                        <li>버섯크림 리조또<span>16,500원</span></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>테마</td>
+                                <td>
+                                    <span>#인스타감성</span>
+                                    <span>#브런치</span>
+                                    <span>#데이트</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+                <div id="store_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21002.01172388726!2d127.36394666449608!3d36.34991784984854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654b3410441eb9%3A0x5c147a5b234f20ab!2z66qo66Oo!5e0!3m2!1sko!2skr!4v1663564877295!5m2!1sko!2skr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- <div id="daumRoughmapContainer1663486057460" class="root_daum_roughmap root_daum_roughmap_landing"></div> -->
+                </div>
+                
+            </div>
+            <div id="store_review">
+                <div class="store_count disFlex justify-space-between">
+                    <span>리뷰 (180)</span> 
+                    <div>
+                        <a href="" class="on">별점 높은 순</a> <span> | </span>
+                        <a href="">별점 낮은 순</a> <span> | </span>
+                        <a href="">등록 순</a>
+                    </div>
+                </div>
+                <a href="../review/review_view.html" target="_blank">
+                    <div class="disFlex">
+                        <div class="review_profile disFlex align-center">
+                            <div class="member_img">
+                                <img src="../images/sec_1/daejeon.png"> 
+                            </div>
+                            <p>파쿠파쿠</p>
+                        </div>
+                        <div class="bubble">
+                            <span><i class="fa-solid fa-pen-to-square"></i>2022.09.01</span>
+                            <div class="star disFlex align-center">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>
+                                대전에서 유명한 브런치맛집 모루입니다. <br>
+                                이 곳은 영업을 오후 4시까지만 하는 정통 브런치맛집으로 일찍 문을 닫지만 줄서있는 손님들이 있을정도로 유명합니다. <br>
+                                이 곳의 대표메뉴는 해쉬브라운 에그베네딕트로 겉은 바삭하고 속은 담백한 해쉬브라운과 햄, 그 위에 홀랜다이즈 소스가 듬뿍 뿌려져 있습니다. <br>
+                                또한 딸기와 팬케익이 수북히 나오는 딸기팬케익이 있으며 정통 브런치를 느낄 수 있는 해쉬브라운과 소세지도 유명합니다. <br>
+                                그리고 브런치를 주문하시면 커피는 1000원입니다.
+                                대전에서........<span>더보기</span>
+                            </p>
+                            <div class="review_photo">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="../review/review_view.html" target="_blank">
+                    <div class="disFlex">
+                        <div class="review_profile disFlex align-center">
+                            <div class="member_img">
+                                <img src="../images/post/review/default_profile.png"> 
+                            </div>
+                            <p>봄봄이</p>
+                        </div>
+                        <div class="bubble">
+                            <span><i class="fa-solid fa-pen-to-square"></i>2022.09.01</span>
+                            <div class="star disFlex align-center">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>
+                                부모님 생신에 모셔간 고급 레스토랑이에요~
+                                <br>
+                                본점은 서울인데 대전에 새로 3호점이
+                                오픈한거라 가게 내부도 깨끗하고 서비스도 맛도 최고였어요~!!
+                            </p>
+                            <div class="review_photo">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="../review/review_view.html" target="_blank">
+                    <div class="disFlex">
+                        <div class="review_profile disFlex align-center">
+                            <div class="member_img">
+                                <img src="../images/sec_3/패스트푸드.png"> 
+                            </div>
+                            <p>요리왕비룡</p>
+                        </div>
+                        <div class="bubble">
+                            <span><i class="fa-solid fa-pen-to-square"></i>2022.09.01</span>
+                            <div class="star disFlex align-center">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>
+                                대전에서 유명한 브런치맛집 모루입니다. <br>
+                                이 곳은 영업을 오후 4시까지만 하는 정통 브런치맛집으로 일찍 문을 닫지만 줄서있는 손님들이 있을정도로 유명합니다. <br>
+                                이 곳의 대표메뉴는 해쉬브라운 에그베네딕트로 겉은 바삭하고 속은 담백한 해쉬브라운과 햄, 그 위에 홀랜다이즈 소스가 듬뿍 뿌려져 있습니다. <br>
+                                또한 딸기와 팬케익이 수북히 나오는 딸기팬케익이 있으며 정통 브런치를 느낄 수 있는 해쉬브라운과 소세지도 유명합니다. <br>
+                                그리고 브런치를 주문하시면 커피는 1000원입니다.
+                                대전에서........<span>더보기</span>
+                            </p>
+                            <div class="review_photo">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                                <img src="../images/review/870475_1661158051213_9322.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="btn_wrap">
+                <div class="more_btn">
+                    <a href="" class="button"><i class="fa-solid fa-angle-down"></i> 더보기</a>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!-- FOOTER -->
+    <footer>
+        <div id="footer_inner" class="disFlex justify-space-between">
+            <div class="logo"><img src="../images/logo_black.png" alt=""></div>
+            <div>
+                <ul class="footer_ul disFlex">
+                    <li><a href="">개인정보이용약관</a></li>
+                    <li>|</li>
+                    <li><a href="">고객센터</a></li>
+                    <li>|</li>
+                    <li><a href="">1:1 문의</a></li>
+                    <li>|</li>
+                    <li><a href="">서비스 소개</a></li>
+                    <li>|</li>
+                    <li><a href="">광고 및 제휴</a></li>
+                </ul>
+                <p>
+                    ㈜ 테이스트립  대표이사: 문보미<br>
+                    서울특별시 강남구 봉은사로 479, 479타워 11층  사업자 등록번호: 742-86-00224<br>
+                    통신판매업 신고번호: 2017-서울강남-01779 고객센터 042-223-0830
+                </p>
+                <p>
+                    © 2022 Tastrip Co., Ltd. All rights reserved.
+                </p>
+            </div>
+            <div class="sns">
+                <i class="fa-brands fa-square-facebook fa-2x"></i>
+                <i class="fa-brands fa-square-instagram fa-2x"></i>
+                <i class="fa-brands fa-square-twitter fa-2x"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER END -->
+</body>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 5,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".myBtn.myBtn-next.s2Next",
+        prevEl: ".myBtn.myBtn-prev.s2Prev",
+      },
+    });
+  </script>
+  <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+  <!-- 3. 실행 스크립트 -->
+  <script charset="UTF-8">
+      new daum.roughmap.Lander({
+          "timestamp" : "1663486057460",
+          "key" : "2bqrb",
+          "mapWidth" : "300",
+          "mapHeight" : "300"
+      }).render();
+  </script>
+</html>

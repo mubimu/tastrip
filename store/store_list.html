@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/store.css">
+    <script src="https://kit.fontawesome.com/17da812ad5.js" crossorigin="anonymous"></script>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/store.js"></script>
+    <title>테이스트립 :: 맛집 검색</title>
+</head>
+<body>
+    <header>
+        <div class="header_wrap disFlex align-center justify-space-between">
+            <a href="../index.html">
+                <img src="../images/logo_color.png" alt="로고">
+            </a>
+            <ul class="search_bar disFlex">
+                <li><input type="text" class="search_1" placeholder="지역"></li>
+                <li><input type="text" class="search_2" placeholder="가게이름, 메뉴"></li>
+                <li><input type="text" class="search_3" placeholder="키워드 (데이트, 회식, 카페)"></li>
+                <li><input type="button" value="검색"></li>
+            </ul>
+            <div class="member_profile">
+                <a href="">
+                    <img src="../images/sec_1/busan.png">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div id="content_wrap">
+        <div id="left_content">
+            <ul class="left_menu">
+                <li class="cate_city">
+                    <p><i class="fa-solid fa-map-location-dot i_menu fa-lg"></i><span>지역</span>으로 찾기<i class="fa-solid fa-chevron-down fa-lg i_arrow"></i></p>
+                    <ul class="submenu">
+                        <li><a href="#">서울</a></li>
+                        <li><a href="#">부산</a></li>
+                        <li><a href="#" class="on">대전</a></li>
+                        <li><a href="#">광주</a></li>
+                        <li><a href="#">대구</a></li>
+                        <li><a href="#">인천</a></li>
+                        <li><a href="#">울산</a></li>
+                        <li><a href="#">제주</a></li>
+                    </ul>
+                </li>
+                <li class="cate_menu">
+                    <p><i class="fa-solid fa-utensils i_menu fa-lg"></i><span>메뉴</span>로 찾기<i class="fa-solid fa-chevron-down fa-lg i_arrow"></i></p>
+                    <ul class="submenu">
+                        <li><a href="#">보쌈/족발</a></li>
+                        <li><a href="#">한식</a></li>
+                        <li><a href="#">돈가스/회/일식</a></li>
+                        <li><a href="#">고기/구이</a></li>
+                        <li><a href="#">야식</a></li>
+                        <li><a href="#">양식</a></li>
+                        <li><a href="#">중식</a></li>
+                        <li><a href="#">아시안</a></li>
+                        <li><a href="#" class="on">분식</a></li>
+                        <li><a href="#">카페/디저트</a></li>
+                        <li><a href="#">패스트푸드</a></li>
+                    </ul>
+                </li>
+                <li class="cate_theme">
+                    <p><i class="fa-solid fa-hashtag i_menu fa-lg"></i></i><span>테마</span>로 찾기<i class="fa-solid fa-chevron-down fa-lg i_arrow"></i></p>
+                    <ul class="submenu control-group">
+                        <li>
+                            <label class="control control-checkbox">
+                                혼밥
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                인스타감성
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                튀김
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                국수/면
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                비 오는 날
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                든든한 한끼
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                매운
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                브런치
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                다이어트
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                데이트
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                해물요리
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                달콤
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                프레쉬
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                볶음
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                밥도둑
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                해장
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                아이동반
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                오마카세
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                제철
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                이열치열
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                집밥
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                회식
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                무한리필
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                단체예약가능
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                몸보신
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                선술집
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="control control-checkbox">
+                                노키즈존
+                                <input type="checkbox" name="theme" value="">
+                                <div class="control_indicator"></div>
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+        <div id="right_content">
+            <div class="right_top">
+                <h3>대전 분식 맛집</h3>
+                <span class="tag">대전 <span>X</span></span><span class="tag">분식 <span>X</span></span>
+            </div>
+            <ul class="tab_wrap disFlex">
+                <li class="tab_on"><i class="fa-solid fa-star"></i>별점 높은 순</li>
+                <li><i class="fa-regular fa-comment-dots"></i>리뷰 많은 순</li>
+                <li><i class="fa-solid fa-shop"></i>새로 등록된 가게</li>
+            </ul>
+            <div class="list_wrap">
+                <p class="disFlex justify-space-between">
+                    <span>1 - 10건 표시</span>
+                    <span>총 120건</span>
+                </p>
+                <div class="list_box disFlex">
+                    <a href="../store/store_view.html"><img src="../images/list/list_1.png" alt=""></a>
+                    <div class="list_text">
+                        <div class="name disFlex align-center">
+                            <h4>떡반집</h4><span class="star">★★★★☆</span><span>4.0</span>
+                        </div>
+                        <p>대전광역시 서구 둔산2동 1091</p>
+                        <div class="list_btn disFlex align-center">
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                            <p>관심 가게</p>
+                        </div>
+                        <p>대전 둔산동에 있는 국물떡볶이 맛집 '떡반집'. 모르는 사람은 있어도 한 번만 먹은 사람은 없는 유명한 분식 맛집입니다. 저렴한 가격대로 다양한 종류의 분식을 취향껏 먹을 수 있습니다. 대표 메뉴 '떡볶이'는 달달하면서도 매콤한 국물 맛이 특징이며 떡과 국물을 함께 먹어야 그 맛이 일품입니다! ....</p>
+                        <span>#매운</span><span>#튀김</span><span>#혼밥</span>
+                        <a href="../store/store_view.html">자세히 보기</a>
+                    </div>
+                </div>
+                <div class="list_box disFlex">
+                    <a href="../store/store_view.html"><img src="../images/list/분식사우 (5).jpg" alt=""></a>
+                    <div class="list_text">
+                        <div class="name disFlex align-center">
+                            <h4>분식사우</h4><span class="star">★★★★☆</span><span>4.0</span>
+                        </div>
+                        <p>대전광역시 유성구 엑스포로 1 대전신세계 Art&Science</p>
+                        <div class="list_btn disFlex align-center">
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                            <p>관심 가게</p>
+                        </div>
+                        <p>분식사우는 남녀노소 누구나 즐길 수 있는 길거리 음식을 분식사우만의 스타일로 재해석하였습니다. 길거리 대표 음식인 떡볶이, 순대 ,튀김뿐만 아니라 새로운 스타일의 퓨전 스낵은 고객들에게 새로운 경험을 선사합니다.</p>
+                        <span>#튀김</span><span>#인스타감성</span><span>#데이트</span>
+                        <a href="../store/store_view.html">자세히 보기</a>
+                    </div>
+                </div>
+                <div class="list_box disFlex">
+                    <a href="../store/store_view.html"><img src="../images/list/하루방만두 (1).jpg" alt=""></a>
+                    <div class="list_text">
+                        <div class="name disFlex align-center">
+                            <h4>하루방만두</h4><span class="star">★★★★☆</span><span>4.0</span>
+                        </div>
+                        <p>대전광역시 중구 중촌동 410-22</p>
+                        <div class="list_btn disFlex align-center">
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                            <p>관심 가게</p>
+                        </div>
+                        <p>저희 하루방만두는 만두전문점으로서 서비스와 손맛이 살아있는, 한 번쯤은 가보고 싶은 식당입니다. 오시는 고객 여러분께 보답하고자 늘 최선을 다하는 서비스를 제공하고 있으며, 맛의 진수를 저희 하루방만두에서 느끼실 수 있도록 항상 노력하고 있습니다. </p>
+                        <span>#혼밥</span><span>#매운</span><span>#아이동반</span>
+                        <a href="../store/store_view.html">자세히 보기</a>
+                    </div>
+                </div>
+                <div class="list_box disFlex">
+                    <a href="../store/store_view.html"><img src="../images/list/싱글벙글 떡볶이 (2).jpg" alt=""></a>
+                    <div class="list_text">
+                        <div class="name disFlex align-center">
+                            <h4>싱글벙글떡볶이</h4><span class="star">★★★★★</span><span>5.0</span>
+                        </div>
+                        <p>대전 동구 대전로797번길 48</p>
+                        <div class="list_btn disFlex align-center">
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                            <p>관심 가게</p>
+                        </div>
+                        <p>
+                            신개념 후불제 떡볶이 뷔페
+                            대식가 소식가 상관없이 드신 만큼만 계산할 수있는
+                            가성비 끝판왕 분식!
+                        </p>
+                        <span>#밥도둑</span><span>#튀김</span><span>#매운</span>
+                        <a href="../store/store_view.html">자세히 보기</a>
+                    </div>
+                </div>
+                <div class="list_box disFlex">
+                    <a href="../store/store_view.html"><img src="../images/list/바로그집 (4).jpg" alt=""></a>
+                    <div class="list_text">
+                        <div class="name disFlex align-center">
+                            <h4>바로그집</h4><span class="star">★★★☆☆</span><span>3.0</span>
+                        </div>
+                        <p>대전광역시 중구 은행동 216</p>
+                        <div class="list_btn disFlex align-center">
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                            <p>관심 가게</p>
+                        </div>
+                        <p> 대전 중구 은행동 여기가 그 유명한 떡볶이</p>
+                        <span>#매운</span><span>#혼밥</span><span>#아이동반</span>
+                        <a href="../store/store_view.html">자세히 보기</a>
+                    </div>
+                </div>
+
+                <div class="list_box disFlex">
+                    <a href="../store/store_view.html"><img src="../images/list/코끼리왕만두 (2).jpg" alt=""></a>
+                    <div class="list_text">
+                        <div class="name disFlex align-center">
+                            <h4>코끼리왕만두</h4><span class="star">★★★★☆</span><span>4.0</span>
+                        </div>
+                        <p>대전 동구 중교로 119</p>
+                        <div class="list_btn disFlex align-center">
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                            <p>관심 가게</p>
+                        </div>
+                        <p>재료가 떨어지면 일찍 마감합니다.
+                            몇일전에 전화주시면 배달도 가능합니다.</p>
+                        <span>#아이동반</span><span>#제철</span><span>#비오는날</span>
+                        <a href="../store/store_view.html">자세히 보기</a>
+                    </div>
+                </div>
+
+                <div class="list_box disFlex">
+                    <a href="../store/store_view.html"><img src="../images/list/복부분식 (2).jpg" alt=""></a>
+                    <div class="list_text">
+                        <div class="name disFlex align-center">
+                            <h4>복수분식 본점</h4><span class="star">★★★★☆</span><span>4.0</span>
+                        </div>
+                        <p>대전 중구 보문로162번길 9 </p>
+                        <div class="list_btn disFlex align-center">
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                            <p>관심 가게</p>
+                        </div>
+                        <p>30년전통 어머니가 끓여주신 칼국수
+                            대를이어 정성껏 만든 음식을 맛있게 드시고 가시는 고객님을 보면서 항상 변하지 않는 맛을 지키는 얼큰이 칼국수가 되겠습니다.</p>
+                        <span>#매운</span><span>#면</span><span>#든든한 한끼</span>
+                        <a href="../store/store_view.html">자세히 보기</a>
+                    </div>
+                </div>
+                <div class="list_box disFlex">
+                    <a href="../store/store_view.html"><img src="../images/list/현정떡볶이 (1).jpg" alt=""></a>
+                    <div class="list_text">
+                        <div class="name disFlex align-center">
+                            <h4>현정떡볶이</h4><span class="star">★★★★★</span><span>5.0</span>
+                        </div>
+                        <p>대전 서구 대덕대로233번길 20</p>
+                        <div class="list_btn disFlex align-center">
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                            <p>관심 가게</p>
+                        </div>
+                        <p>맛있게 매운 즉석떡볶이 전문점 김현정떡볶이 입니다</p>
+                        <span>#데이트</span><span>#튀김</span><span>#매운</span>
+                        <a href="../store/store_view.html">자세히 보기</a>
+                    </div>
+                </div>
+                <div class="list_box disFlex">
+                    <a href="../store/store_view.html"><img src="../images/list/고봉민김밥인 (1).jpg" alt=""></a>
+                    <div class="list_text">
+                        <div class="name disFlex align-center">
+                            <h4>고봉민김밥인 대전송촌점</h4><span class="star">★★★☆☆</span><span>3.0</span>
+                        </div>
+                        <p>대전 대덕구 송촌북로16번길 57</p>
+                        <div class="list_btn disFlex align-center">
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                            <p>관심 가게</p>
+                        </div>
+                        <p>고봉민김밥인은 자연의 맛을 간직한 좋은 재료로
+                            믿고 먹을 수 있는 안전하고 정직한 먹거리만을 만듭니다.</p>
+                        <span>#든든한 한끼</span><span>#아이동반</span><span>#혼밥</span>
+                        <a href="../store/store_view.html">자세히 보기</a>
+                    </div>
+                </div>
+                <div class="list_box disFlex">
+                    <a href="../store/store_view.html"><img src="../images/list/바르다김선생 (1).jpg" alt=""></a>
+                    <div class="list_text">
+                        <div class="name disFlex align-center">
+                            <h4>바르다김선생 대전관평점</h4><span class="star">★★★★☆</span><span>4.0</span>
+                        </div>
+                        <p> 대전 유성구 테크노4로 105 T PLAZA</p>
+                        <div class="list_btn disFlex align-center">
+                            <i class="fa-regular fa-heart fa-2x"></i>
+                            <p>관심 가게</p>
+                        </div>
+                        <p>정성껏.깔끔하고 맛있게만듭니다 많이 찾아주세요</p>
+                        <span>#데이트</span><span>#아이동반</span><span>#혼밥</span>
+                        <a href="../store/store_view.html">자세히 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="more_btn">
+                <a href="" class="button"><i class="fa-solid fa-angle-down"></i> 더보기</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer_inner" class="disFlex justify-space-between">
+            <div class="logo"><img src="../images/logo_black.png" alt=""></div>
+            <div>
+                <ul class="footer_ul disFlex">
+                    <li><a href="">개인정보이용약관</a></li>
+                    <li>|</li>
+                    <li><a href="">고객센터</a></li>
+                    <li>|</li>
+                    <li><a href="">1:1 문의</a></li>
+                    <li>|</li>
+                    <li><a href="">서비스 소개</a></li>
+                    <li>|</li>
+                    <li><a href="">광고 및 제휴</a></li>
+                </ul>
+                <p>
+                    ㈜ 테이스트립  대표이사: 문보미<br>
+                    서울특별시 강남구 봉은사로 479, 479타워 11층  사업자 등록번호: 742-86-00224<br>
+                    통신판매업 신고번호: 2017-서울강남-01779 고객센터 042-223-0830
+                </p>
+                <p>
+                    © 2022 Tastrip Co., Ltd. All rights reserved.
+                </p>
+            </div>
+            <div class="sns">
+                <i class="fa-brands fa-square-facebook fa-2x"></i>
+                <i class="fa-brands fa-square-instagram fa-2x"></i>
+                <i class="fa-brands fa-square-twitter fa-2x"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
