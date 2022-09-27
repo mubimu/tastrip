@@ -36,6 +36,25 @@ $( document ).ready( function() {
      
     }
 
+    //체크박스 슬라이드
+    $(document).click(function(e){
+        if($(e.target).hasClass('search_3')){
+            $('.theme_box').slideDown(600);
+        }else if(!$(e.target).parents().hasClass('search_li')){
+            $('.theme_box').slideUp(600);
+        }
+    })
+
+    //체크박스 갯수 제한
+    $("input[type='checkbox']").on("click",function(){
+        let count = $("input:checked[type='checkbox']").length;
+
+        if(count>3){
+            $(this).prop("checked",false);
+            alert('키워드는 최대 3개까지 선택 가능합니다.');
+        }
+    });
+
     // 스크롤 TOP 버튼
     $( window ).scroll( function() {
         if ( $( this ).scrollTop() > 200 ) {

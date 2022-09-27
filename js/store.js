@@ -22,5 +22,8 @@ $(document).ready(function(){
         $(this).find('.i_arrow').toggleClass('fa-chevron-down');
         $(this).find('.i_arrow').toggleClass('fa-chevron-up');
     });
-
+    
+    document.getElementById('revi').onclick = function() {             
+        window.open("about:blank").location.href="../review/review_write.html"     
+    }
 });
