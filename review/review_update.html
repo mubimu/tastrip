@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/review.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://kit.fontawesome.com/17da812ad5.js" crossorigin="anonymous"></script>
+    <title>REVIEW</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../images/logo_design_4.png" alt="로고">
+        </a>
+    </header>
+    <form name="review">
+        <div class="content">
+            <div>
+                <div class="disFlex profile">
+                    <div class="member_profile">
+                        <img src="../images/sec_1/busan.png">
+                    </div>
+                    <p class="nickname">파쿠파쿠</p>
+                    <p class="reg_date">2022.09.01<i class="fa-solid fa-pencil"></i></p>
+                </div> 
+                <div class="text_area">
+                    <div class="star_num disFlex">
+                        <p>별점 : </p>
+                        <input type="hidden" name="t_star">
+                        <div>
+                        <span class="star">
+                            ★★★★★
+                            <span>★★★★★</span>
+                            <input type="range" id="starRange" oninput="drawStar(this)" value="8" step="1" min="0" max="10">
+                            <!-- value 값 넘길때 2배로 -->
+                        </span>
+                        </div>
+                    </div>
+                    <a class="write_store" href="../store/store_view.html">@모루 - <span>대전 서구</span></a>
+                    <textarea placeholder="리뷰 내용을 작성해주세요">
+최소 열 번은 넘게 방문한 가게입니다. 하지만 먹어본 메뉴 종류가 그리 많진 않아요:) 
+종종 이 가게의 에그베네딕트와 프렌치토스트가 생각이 나곤 합니다
+                        
+프렌치토스트는 엄청나게 특별하진 않지만, 이 가게가 주는 포근한 느낌과 잘 어울린다 말할 수 있습니다. 커스터드크림과 딸기잼, 메이플시럽이 바닐라아이스크림과 조화롭게 어우러집니다. 
+                        
+에그베네딕트는 특별합니다. 머스터드소스와 수란의 노른자도 좋지만, 해쉬브라운이 정말 맛있어요. 채 썬 양파조림이 해쉬브라운 표면에 올라가서, 새콤하면서도 양파의 단맛이 잘 느껴집니다. 
+                        
+제게 만약 대전을 떠났다가 돌아오게되면, 이 음식을 먹을 때 비로소 대전으로 돌아왔다고 느낄 것 같습니다! 드셔보시는걸 추천드려용
+                    </textarea>
+                </div> 
+                <div id='image_preview'>
+                    <label for="btnAtt">
+                        <div class="btn-upload">사진 선택</div>
+                    </label>
+                    <input type="file" name="t_photo" id="btnAtt" multiple>
+                    <div id="att_zone" data-placeholder="원하시는 이미지를 드래그 또는 추가해주세요(최대 5개)">
+                        <div>
+                            <img src="../images/review/moru_1.jpg">
+                            <input type="button" value="X">
+                            
+                        </div>
+                        <div>
+                            <img src="../images/review/moru_2.jpg">
+                            <input type="button" value="X">
+                            
+                        </div>
+                        <div>
+                            <img src="../images/review/moru_3.jpg">
+                            <input type="button" value="X">
+                        </div>
+                        <div>
+                            <img src="../images/review/moru_4.jpg">
+                            <input type="button" value="X">
+                        </div>
+                        <div>
+                            <img src="../images/review/moru_5.jpg">
+                            <input type="button" value="X">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review_button disFlex">
+                <input type="button" value="수정 저장">
+                <input type="button" value="취소" onclick="window.close()">
+            </div>
+            
+        </div>
+    </form>
+</body>
+</html>
+<script>
+    ( /* att_zone : 이미지들이 들어갈 위치 id, btn : file tag id */
+        imageView = function imageView(att_zone, btn){
+
+            var attZone = document.getElementById(att_zone);
+            var btnAtt = document.getElementById(btn)
+            var sel_files = [];
+        
+            btnAtt.onchange = function(e){
+            var files = e.target.files;
+            var fileArr = Array.prototype.slice.call(files)
+            for(f of fileArr){
+                imageLoader(f);
+            }
+            }  
+            
+            // 탐색기에서 드래그앤 드롭 사용
+            attZone.addEventListener('dragenter', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            }, false)
+            
+            attZone.addEventListener('dragover', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            
+            }, false)
+        
+            attZone.addEventListener('drop', function(e){
+            var files = {};
+            e.preventDefault();
+            e.stopPropagation();
+            var dt = e.dataTransfer;
+            files = dt.files;
+            for(f of files){
+                imageLoader(f);
+            }
+            
+            }, false)
+            
+            
+            /*첨부된 이미지를 배열에 넣고 미리보기 */
+            imageLoader = function(file){
+            sel_files.push(file);
+            var reader = new FileReader();
+            reader.onload = function(ee){
+                let img = document.createElement('img')
+                img.src = ee.target.result;
+                attZone.appendChild(makeDiv(img, file));
+            }
+            
+            reader.readAsDataURL(file);
+            }
+            
+            /*첨부된 파일이 있는 경우 checkbox와 함께 attZone에 추가할 div를 만들어 반환 */
+            makeDiv = function(img, file){
+            var div = document.createElement('div')
+            var btn = document.createElement('input')
+            btn.setAttribute('type', 'button')
+            btn.setAttribute('value', 'X')
+            btn.setAttribute('delFile', file.name);
+            btn.onclick = function(ev){
+                var ele = ev.srcElement;
+                var delFile = ele.getAttribute('delFile');
+
+                console.log(delFile, sel_files)
+                
+                for(var i=0 ;i<sel_files.length; i++){
+                if(delFile== sel_files[i].name){
+                    sel_files.splice(i, 1);      
+                }
+                }
+                
+                dt = new DataTransfer();
+                for(f in sel_files) {
+                var file = sel_files[f];
+                dt.items.add(file);
+                }
+                btnAtt.files = dt.files;
+                var p = ele.parentNode;
+                attZone.removeChild(p)
+            }
+            div.appendChild(img)
+            div.appendChild(btn)
+            return div
+            }
+        }
+    )('att_zone', 'btnAtt')
+</script>
+<script>
+    var starVal = document.getElementById('starRange').value;
+    document.querySelector(`.star span`).style.width = `${starVal * 10}%`;
+
+    const drawStar = (target) => {
+        var star_span = document.querySelector(`.star span`).style.width = `${target.value * 10}%`;
+        console.log(star_span);
+        var star_score = document.getElementsByName('star_score').value = target.value / 2;
+        review.t_star.value = star_score;
+    }
+</script>
