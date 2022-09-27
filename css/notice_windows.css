@@ -26,7 +26,7 @@ header>div{
 header>div:first-child{
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 12px;
     margin: 0 10px;
     border-top: rgb(242,142,38) solid 2px;
     border-bottom: rgba(170, 134, 86, 0.638) solid 1px;
@@ -35,7 +35,7 @@ header div>div{
     display: flex;
 }
 header div p{
-    margin-top: 8px;
+    line-height: 30px;
     margin-left: 10px;
     font-size: 11px;
     color: rgb(152, 152, 152);
@@ -44,7 +44,7 @@ header div>p{
     margin-right: 10px;
 }
 .logo{
-    height: 25px;
+    height: 30px;
     margin-left: 15px;
 }
 .title{
